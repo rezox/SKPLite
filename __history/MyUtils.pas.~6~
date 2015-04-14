@@ -1,0 +1,50 @@
+unit MyUtils;
+
+interface
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,DB,
+  CommCtrl;
+
+
+  Function Kodesatker(satker:string): String;
+  procedure IsiJabatan(cmb:TComboBox);
+  procedure IsiPangkat(cmdpangkat:TComboBox);
+
+implementation
+uses Modulsrc;
+
+Function Kodesatker(Satker:string):string;
+var
+ i:integer;
+begin
+  with Dm,Qexec do
+  begin
+     close;
+     sql.Clear;
+     sql.Text:='Select id_satker Where Nama_satker=:ast';
+     prepare;
+     parambyname('ast').Value:=Satker;
+     Open;
+     result:=Fields[0].AsString;
+  end;
+end;
+
+Procedure IsiJabatan(cmb:TComboBox);
+var
+ i:integer;
+ maxi:integer;
+begin
+  with Dm,Qexec  do
+  begin
+    close;
+    sql.Clear;
+    qtemp.sql.Text:='Select Count(jabatan) from tbl_jabatan';
+    qtemp.Open;
+    maxi:=qtemp.Fields[0].AsInteger;
+    for i := 0 to max-1  do
+       sql.Text:='Select jabatan from tbl jabatan Where jabatan<>"-" ';
+
+  end;
+end;
+end.

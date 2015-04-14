@@ -1,0 +1,47 @@
+unit MainSrc;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    MainMenu1: TMainMenu;
+    Form1: TMenuItem;
+    abelJabatan1: TMenuItem;
+    DataPegawai1: TMenuItem;
+    Exit1: TMenuItem;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    procedure abelJabatan1Click(Sender: TObject);
+    procedure DataPegawai1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+uses JabatanFrm,PegawaiFrm;
+{$R *.dfm}
+
+procedure TForm1.abelJabatan1Click(Sender: TObject);
+var
+ FormJabatan:TForm2;
+begin
+   Form2.Parent:=Panel2;
+   Form2.Show;
+end;
+
+procedure TForm1.DataPegawai1Click(Sender: TObject);
+begin
+  Form3.Parent:=Panel2;
+  FOrm3.show;
+end;
+
+end.

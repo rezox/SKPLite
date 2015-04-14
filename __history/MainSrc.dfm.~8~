@@ -1,0 +1,59 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 348
+  ClientWidth = 600
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 113
+    Height = 348
+    Align = alLeft
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 113
+    Top = 0
+    Width = 487
+    Height = 348
+    Align = alClient
+    TabOrder = 1
+  end
+  object MainMenu1: TMainMenu
+    Left = 176
+    Top = 112
+    object Form1: TMenuItem
+      Caption = 'Form'
+      object abelJabatan1: TMenuItem
+        Caption = 'Tabel Jabatan'
+        OnClick = abelJabatan1Click
+      end
+      object DataPegawai1: TMenuItem
+        Caption = 'Data Pegawai'
+        OnClick = DataPegawai1Click
+      end
+      object Config1: TMenuItem
+        Caption = 'Config'
+        OnClick = Config1Click
+      end
+      object Satker1: TMenuItem
+        Caption = 'Satker'
+        OnClick = Satker1Click
+      end
+    end
+    object Exit1: TMenuItem
+      Caption = 'Exit'
+    end
+  end
+end

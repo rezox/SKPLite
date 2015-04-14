@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2014/12/29 20:55:16.000.750,=C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/12/29 21:03:21.000.636,=C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2014/12/29 21:03:55.000.733,=C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2014/12/29 21:27:21.000.109,C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit3.dfm=F:\Delphi\SKP\ModulSrc.dfm</Transaction>
+    <Transaction>2014/12/29 21:27:21.000.109,C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit3.pas=F:\Delphi\SKP\ModulSrc.pas</Transaction>
+    <Transaction>2014/12/29 21:27:41.000.389,C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit2.dfm=F:\Delphi\SKP\JabatanFrm.dfm</Transaction>
+    <Transaction>2014/12/29 21:27:41.000.389,C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit2.pas=F:\Delphi\SKP\JabatanFrm.pas</Transaction>
+    <Transaction>2014/12/29 21:27:47.000.971,C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit1.pas=F:\Delphi\SKP\MainSrc.pas</Transaction>
+    <Transaction>2014/12/29 21:27:47.000.971,C:\Users\Simpeg\Documents\RAD Studio\Projects\Unit1.dfm=F:\Delphi\SKP\MainSrc.dfm</Transaction>
+    <Transaction>2014/12/29 21:27:59.000.741,C:\Users\Simpeg\Documents\RAD Studio\Projects\Project1.dproj=F:\Delphi\SKP\SKPLite.dproj</Transaction>
+    <Transaction>2014/12/30 15:33:17.000.488,=F:\Delphi\SKP\Unit3.pas</Transaction>
+    <Transaction>2014/12/30 15:35:32.000.326,F:\Delphi\SKP\PegawaiFrm.pas=F:\Delphi\SKP\Unit3.pas</Transaction>
+    <Transaction>2014/12/30 15:35:32.000.326,F:\Delphi\SKP\PegawaiFrm.dfm=F:\Delphi\SKP\Unit3.dfm</Transaction>
+    <Transaction>2015/01/17 07:13:49.000.711,=F:\Delphi\SKP\Unit4.pas</Transaction>
+    <Transaction>2015/01/17 07:27:53.000.618,F:\Delphi\SKP\Unit4.dfm=F:\Delphi\SKP\ConnFrm.dfm</Transaction>
+    <Transaction>2015/01/17 07:27:53.000.618,F:\Delphi\SKP\Unit4.pas=F:\Delphi\SKP\ConnFrm.pas</Transaction>
+    <Transaction>2015/01/17 10:36:33.000.456,=F:\Delphi\SKP\Unit5.pas</Transaction>
+    <Transaction>2015/01/17 10:41:16.000.654,F:\Delphi\SKP\Unit5.pas=F:\Delphi\SKP\SatkerFrm.pas</Transaction>
+    <Transaction>2015/01/17 10:41:16.000.654,F:\Delphi\SKP\Unit5.dfm=F:\Delphi\SKP\SatkerFrm.dfm</Transaction>
+    <Transaction>2015/02/20 12:16:49.000.009,=F:\Delphi\SKP\Unit1.pas</Transaction>
+    <Transaction>2015/02/20 12:31:33.000.692,F:\Delphi\SKP\Unit1.pas=F:\Delphi\SKP\MyUtils.pas</Transaction>
+    <Transaction>2015/03/02 21:45:26.000.210,=F:\Delphi\SKP\Unit5.pas</Transaction>
+    <Transaction>2015/03/02 21:57:16.000.417,F:\Delphi\SKP\MutasiFrm.dfm=F:\Delphi\SKP\Unit5.dfm</Transaction>
+    <Transaction>2015/03/02 21:57:16.000.417,F:\Delphi\SKP\MutasiFrm.pas=F:\Delphi\SKP\Unit5.pas</Transaction>
+    <Transaction>2015/04/14 11:04:25.144,=F:\Delphi\SKP\Unit6.pas</Transaction>
+    <Transaction>2015/04/14 11:14:59.151,F:\Delphi\SKP\JobFrm.dfm=F:\Delphi\SKP\Unit6.dfm</Transaction>
+    <Transaction>2015/04/14 11:14:59.151,F:\Delphi\SKP\JobFrm.pas=F:\Delphi\SKP\Unit6.pas</Transaction>
+  </Transactions>
+</BorlandProject>

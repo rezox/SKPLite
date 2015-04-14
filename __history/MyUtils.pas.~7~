@@ -1,0 +1,83 @@
+unit MyUtils;
+
+interface
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls,DB,
+  CommCtrl;
+
+
+  Function Kodesatker(satker:string): String;
+  procedure IsiJabatan(cmb:TComboBox);
+  procedure IsiPangkat(cmdpangkat:TComboBox);
+  procedure isiSatker(tcombo:TCombobox);
+
+implementation
+uses Modulsrc;
+
+procedure IsiSatker(tcombo:TCombobox);
+var
+ i:integer;
+begin
+ with dm do
+ begin
+  for i:= 1 to 18 do
+    begin
+      tcombo.Items.Add(tblsatkerNama_satker.asstring);
+      tblsatker.Next;
+    end;
+ end;
+
+end;
+
+Function Kodesatker(Satker:string):string;
+var
+ i:integer;
+begin
+  with Dm,Qexec do
+  begin
+     close;
+     sql.Clear;
+     sql.Text:='Select id_satker Where Nama_satker=:ast';
+     prepare;
+     parambyname('ast').Value:=Satker;
+     Open;
+     result:=Fields[0].AsString;
+  end;
+end;
+
+Procedure IsiJabatan(cmb:TComboBox);
+var
+ i:integer;
+ maxi:integer;
+begin
+  with Dm do
+  begin
+    for i :=  1 to 17 do
+      begin
+        if tbljabatanjabatan.AsString<>'-' then
+         begin
+           cmb.Items.Add(tbljabatanjabatan.AsString);
+         end;
+        tbljabatan.Next;
+      end;
+  end;
+end;
+
+procedure isiPangkat(cmdpangkat:TCombobox);
+var
+ i:integer;
+ maxi:integer;
+begin
+   with Dm do
+  begin
+    for i :=  1 to 17 do
+      begin
+        cmdpangkat.Items.Add(tbljabatanpangkat.AsString);
+        tbljabatan.Next;
+      end;
+  end;
+end;
+
+
+end.

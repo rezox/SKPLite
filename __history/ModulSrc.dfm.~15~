@@ -1,0 +1,69 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 249
+  Width = 410
+  object MyConn: TZConnection
+    ControlsCodePage = cCP_UTF16
+    Connected = True
+    Port = 0
+    Database = 'F:\Delphi\SKP\SKPlite.sqd'
+    Protocol = 'sqlite-3'
+    LibraryLocation = 'F:\Delphi\sqlite3.dll'
+    Left = 60
+    Top = 72
+  end
+  object Qexec: TZQuery
+    Connection = MyConn
+    Params = <>
+    Left = 60
+    Top = 8
+  end
+  object tblpejabat: TZTable
+    Connection = MyConn
+    TableName = 'tbl_pegawai'
+    Left = 148
+    Top = 12
+  end
+  object Dspejabat: TDataSource
+    DataSet = tblpejabat
+    Left = 148
+    Top = 68
+  end
+  object tbljabatan: TZTable
+    Connection = MyConn
+    Active = True
+    TableName = 'tbl_jabatan'
+    Left = 224
+    Top = 12
+    object tbljabatangolongan: TWideStringField
+      FieldName = 'golongan'
+      Required = True
+      Size = 8
+    end
+    object tbljabatanpangkat: TWideStringField
+      FieldName = 'pangkat'
+      Size = 40
+    end
+    object tbljabatanjabatan: TWideStringField
+      FieldName = 'jabatan'
+      Size = 40
+    end
+  end
+  object DsJabatan: TDataSource
+    DataSet = tbljabatan
+    Left = 220
+    Top = 68
+  end
+  object tblsatker: TZTable
+    Connection = MyConn
+    Active = True
+    TableName = 'tbl_satker'
+    Left = 300
+    Top = 16
+  end
+  object Dssatker: TDataSource
+    DataSet = tblsatker
+    Left = 300
+    Top = 72
+  end
+end

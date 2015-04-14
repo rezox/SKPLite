@@ -1,0 +1,49 @@
+unit ModulSrc;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, DBAccess, Uni, MemDS, UniProvider,
+  SQLiteUniProvider, ZAbstractTable, ZDataset, ZAbstractRODataset,
+  ZAbstractDataset, ZAbstractConnection, ZConnection;
+
+type
+  TDM = class(TDataModule)
+    MyConn: TZConnection;
+    Qexec: TZQuery;
+    tblpejabat: TZTable;
+    Dspejabat: TDataSource;
+    tbljabatan: TZTable;
+    DsJabatan: TDataSource;
+    tblsatker: TZTable;
+    Dssatker: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    function Cekidada(tbl:string;idcari:string):boolean;
+  end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'System.Classes.TPersistent'}
+
+{$R *.dfm}
+
+Function TDm.Cekidada(tbl: string; idcari: string):boolean;
+var
+ hasil:boolean;
+begin
+  hasil:=true;
+  if hasil then
+    begin
+      qexec.sql.Clear;
+      qexec.SQL.Text:='select '+
+    end
+
+end;
+
+end.

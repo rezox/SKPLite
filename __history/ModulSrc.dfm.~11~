@@ -1,0 +1,42 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 249
+  Width = 410
+  object MyConn: TZConnection
+    ControlsCodePage = cCP_UTF16
+    Port = 0
+    Database = 'F:\Delphi\SKP\SKPlite.sqd'
+    Protocol = 'sqlite-3'
+    LibraryLocation = 'F:\Delphi\sqlite3.dll'
+    Left = 60
+    Top = 72
+  end
+  object Qexec: TZQuery
+    Connection = MyConn
+    Params = <>
+    Left = 60
+    Top = 8
+  end
+  object tblpejabat: TZTable
+    Connection = MyConn
+    TableName = 'tbl_jabatan'
+    Left = 148
+    Top = 12
+  end
+  object DataSource1: TDataSource
+    DataSet = tblpejabat
+    Left = 148
+    Top = 68
+  end
+  object tbljabatan: TZTable
+    Connection = MyConn
+    TableName = 'tbl_jabatan'
+    Left = 240
+    Top = 16
+  end
+  object DataSource2: TDataSource
+    DataSet = tblpejabat
+    Left = 240
+    Top = 72
+  end
+end

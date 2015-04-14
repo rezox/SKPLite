@@ -1,0 +1,132 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'Data Jabatan '
+  ClientHeight = 304
+  ClientWidth = 471
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 471
+    Height = 304
+    Align = alClient
+    Caption = 'Jabatan Pegawai'
+    TabOrder = 0
+    ExplicitWidth = 360
+    ExplicitHeight = 247
+    object Label1: TLabel
+      Left = 11
+      Top = 31
+      Width = 39
+      Height = 13
+      Caption = 'Id Posisi'
+    end
+    object Label2: TLabel
+      Left = 11
+      Top = 58
+      Width = 83
+      Height = 13
+      Caption = 'Nama Kedudukan'
+    end
+    object Label3: TLabel
+      Left = 11
+      Top = 87
+      Width = 56
+      Height = 13
+      Caption = 'Keterangan'
+    end
+    object Edit1: TEdit
+      Left = 110
+      Top = 28
+      Width = 157
+      Height = 21
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+    object Edit2: TEdit
+      Left = 110
+      Top = 55
+      Width = 237
+      Height = 21
+      TabOrder = 1
+      Text = 'Edit2'
+    end
+    object Edit5: TEdit
+      Left = 110
+      Top = 82
+      Width = 209
+      Height = 21
+      TabOrder = 2
+      Text = 'Edit5'
+    end
+    object Button1: TButton
+      Left = 293
+      Top = 125
+      Width = 75
+      Height = 25
+      Caption = 'Simpan'
+      ModalResult = 6
+      TabOrder = 3
+    end
+    object Button2: TButton
+      Left = 127
+      Top = 125
+      Width = 75
+      Height = 25
+      Caption = 'Baru'
+      ModalResult = 2
+      TabOrder = 4
+      OnClick = Button2Click
+    end
+    object Panel1: TPanel
+      Left = 2
+      Top = 156
+      Width = 467
+      Height = 146
+      Align = alBottom
+      BevelInner = bvLowered
+      TabOrder = 5
+      object DBGrid1: TDBGrid
+        Left = 2
+        Top = 2
+        Width = 463
+        Height = 142
+        Align = alClient
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+    end
+    object Button3: TButton
+      Left = 385
+      Top = 125
+      Width = 75
+      Height = 25
+      Caption = 'Close'
+      ModalResult = 6
+      TabOrder = 6
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Left = 212
+      Top = 125
+      Width = 75
+      Height = 25
+      Caption = 'Edit'
+      ModalResult = 6
+      TabOrder = 7
+    end
+  end
+end

@@ -1,0 +1,93 @@
+unit JobFrm;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids,
+  Vcl.ExtCtrls;
+
+type
+  TForm6 = class(TForm)
+    GroupBox1: TGroupBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit5: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Panel1: TPanel;
+    DBGrid1: TDBGrid;
+    Button3: TButton;
+    Button4: TButton;
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    Function Datakosong:boolean;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form6: TForm6;
+
+implementation
+uses ModulSrc;
+{$R *.dfm}
+
+Function TForm6.Datakosong:boolean;
+var
+ ada:boolean;
+begin
+  ada:=true;
+  if ada then ada:=edit1.Text<>'';
+  if ada then ada:=edit2.Text<>'';
+  if ada then ada:=edit5.Text<>'';
+  if not ada then
+    ShowMessage('Data Belum lengkap terisi!!!');
+  result:=ada;
+end;
+
+procedure TForm6.Button1Click(Sender: TObject);
+begin
+   if Datakosong then
+     begin
+       with Dm,Qexec do
+        begin
+          close;
+          sql.Clear;
+          sql.Text:='Insert Into tblposisi(id_posisi,Nama_posisi,Keterangan,' +
+             'create_date) VALUES(:idpos,:posisi,:ket,:tglpos)';
+          prepare;
+          parambyname('idpos').Value:=edit1.Text;
+          parambyname('posisi').Value:=edit2.Text;
+          parambyname('ket').Value:=edit5.Text;
+          parambyname('tglpos').Value:=DateToStr(Now);
+          ExecSQL;
+          tblposisi.Close;
+          tblposisi.Open;
+          edit1.Text:='';
+          edit2.Text:='';
+          edit5.Text:='';
+        end;
+     end;
+end;
+
+procedure TForm6.Button2Click(Sender: TObject);
+begin
+   Edit1.Text:='';
+   edit2.Text:='';
+   edit5.text:='';
+   edit1.SetFocus;
+end;
+
+procedure TForm6.Button3Click(Sender: TObject);
+begin
+  Close;
+end;
+
+end.
